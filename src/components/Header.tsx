@@ -38,7 +38,7 @@ export const Header: React.FC = () => {
         { label: 'Início', target: 'inicio' },
         { label: 'Sobre Nós', target: 'sobre-nos' },
         { label: 'Serviços', target: 'servicos' },
-        { label: 'Depoimentos', target: 'depoimentos' },
+        { label: 'Curso de Barbeiro', target: 'curso' },
     ];
 
     // --- RENDER ---

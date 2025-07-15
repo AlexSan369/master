@@ -4,7 +4,7 @@ import { Phone, Mail } from 'lucide-react';
 
 const CourseEnrollmentSection: React.FC = () => {
     return (
-        <section id='agendar' className="bg-background py-20 px-4 md:px-12">
+        <section id='curso' className="bg-background py-20 px-4 md:px-12">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 
                 <div className="text-light text-center lg:text-left">
