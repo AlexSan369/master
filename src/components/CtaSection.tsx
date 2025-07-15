@@ -11,7 +11,7 @@ const CtaSection: React.FC = () => {
 
             <div className="relative z-10 text-center max-w-3xl mx-auto px-4">
                 <h2 className="text-3xl md:text-5xl font-extrabold text-light leading-tight">
-                    EXPERIMENTE O LUXO DOS NOSSOS SERVIÇOS DE BARBEARIA EM CASA
+                    EXPERIMENTE O LUXO DOS NOSSOS SERVIÇOS DE BARBEARIA
                 </h2>
                 
                 <div className="mt-8">
