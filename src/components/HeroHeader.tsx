@@ -3,7 +3,7 @@ import { InfoBox } from './InfoBox';
 
 export const HeroHeader: React.FC = () => {
     return (
-        <section 
+        <section id='inicio'
             className="relative h-screen flex items-center justify-center text-light bg-cover bg-center pt-20 pb-48 md:pb-24"
             style={{ backgroundImage: `url(${heroImg})` }} 
         >

@@ -9,7 +9,7 @@ const StatItem: React.FC<{ value: string; label: string }> = ({ value, label }) 
 
 export const AboutUsSection: React.FC = () => {
     return (
-        <section className="bg-light-bg py-20 px-4 md:px-12">
+        <section id='sobre-nos' className="bg-light-bg py-20 px-4 md:px-12">
             <div className="max-w-6xl pt-24 lg:pt-36 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="lg:order-last">
                     <img 

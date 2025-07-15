@@ -13,7 +13,7 @@ const ServicesSection: React.FC = () => {
     ];
 
     return (
-        <section className="bg-light-bg py-20 px-4 md:px-12">
+        <section id='servicos' className="bg-light-bg py-20 px-4 md:px-12">
             <div className="max-w-4xl mx-auto">
                 
                 <div className="text-center mb-12">

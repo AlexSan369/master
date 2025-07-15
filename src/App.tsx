@@ -1,7 +1,3 @@
-/*
- * ARQUIVO: src/App.tsx
- * DESCRIÇÃO: Versão final da landing page com todos os componentes.
- */
 import React from 'react';
 import { Header } from './components/Header'; // Assumindo que exportou como nomeado
 import {HeroHeader} from './components/HeroHeader';
