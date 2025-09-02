@@ -5,7 +5,11 @@
 import React from 'react';
 import ServiceItem from './ServiceItem';
 
-const ServicesSection: React.FC = () => {
+interface HeaderProps {
+  onBookNowClick: () => void;
+}
+
+const ServicesSection: React.FC<HeaderProps> = ({ onBookNowClick }) => {
   // Novos dados dos serviços, divididos por categoria
   const cortes = [
     { title: 'Degradê', description: 'Corte moderno com transição suave.', price: 'R$ 30' },
@@ -77,7 +81,7 @@ const ServicesSection: React.FC = () => {
         {/* Botão de Agendamento */}
         <div className="text-center mt-12">
           <a
-            href="#"
+            onClick={onBookNowClick}
             className="bg-primary text-dark-text font-bold py-3 px-8 rounded-sm hover:opacity-90 transition-opacity duration-300"
           >
             AGENDAR UM HORÁRIO

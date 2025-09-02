@@ -1,7 +1,11 @@
 import React from 'react';
 import ctaImg from '../assets/cta-bg.png';
 
-const CtaSection: React.FC = () => {
+interface HeaderProps {
+  onBookNowClick: () => void;
+}
+
+const CtaSection: React.FC<HeaderProps> = ({ onBookNowClick }) => {
     return (
         <section 
             className="relative py-24 bg-cover bg-center"
@@ -16,7 +20,7 @@ const CtaSection: React.FC = () => {
                 
                 <div className="mt-8">
                     <a
-                        href="#"
+                        onClick={onBookNowClick}
                         className="bg-primary text-dark-text font-bold py-4 px-10 rounded-sm hover:opacity-90 transition-opacity duration-300 text-lg"
                     >
                         AGENDAR UM HORÁRIO

@@ -2,7 +2,12 @@ import React from 'react';
 import heroImg from '../assets/hero-img.png';
 import { InfoBox } from './InfoBox'; // Certifique-se de que o caminho está correto
 
-export const HeroHeader: React.FC = () => {
+interface HeaderProps {
+  onBookNowClick: () => void;
+}
+
+
+export const HeroHeader: React.FC<HeaderProps> = ({ onBookNowClick }) => {
     return (
         <section 
             id="inicio" // Mantendo o id para a navegação
@@ -22,7 +27,7 @@ export const HeroHeader: React.FC = () => {
                 </p>
                 
                 <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#agendar" className="bg-primary text-dark-text font-bold py-3 px-8 rounded-sm w-full sm:w-auto text-center">
+                    <a onClick={onBookNowClick} className="bg-primary text-dark-text font-bold py-3 px-8 rounded-sm w-full sm:w-auto text-center">
                         AGENDAR UM HORÁRIO
                     </a>
                     <a href="#servicos" className="border-2 border-primary text-primary font-bold py-3 px-8 rounded-sm w-full sm:w-auto text-center">

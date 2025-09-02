@@ -1,23 +1,38 @@
+/*
+ * ARQUIVO: src/pages/HomePage.tsx
+ * DESCRIÇÃO: Corrigido para aceitar a propriedade onBookNowClick.
+ */
 import React from 'react';
-import {Header} from '../components/Header';
-import {HeroHeader} from '../components/HeroHeader';
+// Importações de todos os nossos componentes
+import { Header } from '../components/Header';
+import { HeroHeader } from '../components/HeroHeader';
 import AboutUsSection from '../components/AboutUsSection';
 import ServicesSection from '../components/ServicesSection';
 import CtaSection from '../components/CtaSection';
 import WhyChooseUsSection from '../components/WhyChooseUsSection';
 import CourseEnrollmentSection from '../components/CourseEnrollmentSection';
 import MapSection from '../components/MapSection';
-import {Footer} from '../components/Footer';
+import { Footer } from '../components/Footer';
+import BookingSystem from '../components/BookingSystem'; 
 
-const HomePage: React.FC = () => {
+// ▼▼▼ ALTERAÇÃO PRINCIPAL AQUI ▼▼▼
+// 1. Definimos uma "interface" para dizer quais propriedades esta página recebe.
+interface HomePageProps {
+  onBookNowClick: () => void;
+}
+
+// 2. Dizemos que o nosso componente HomePage usa esta interface.
+const HomePage: React.FC<HomePageProps> = ({ onBookNowClick }) => {
   return (
     <>
-      <Header />
+      {/* 3. Agora podemos passar a propriedade para os componentes filhos */}
+      <Header onBookNowClick={onBookNowClick} />
       <main>
-        <HeroHeader />
+        <HeroHeader onBookNowClick={onBookNowClick} />
         <AboutUsSection />
-        <ServicesSection />
-        <CtaSection />
+        <ServicesSection onBookNowClick={onBookNowClick}/>
+        <BookingSystem />
+        <CtaSection onBookNowClick={onBookNowClick} />
         <WhyChooseUsSection />
         <CourseEnrollmentSection />
         <MapSection />

@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
-export const Header: React.FC = () => {
+interface HeaderProps {
+  onBookNowClick: () => void;
+}
+
+export const Header: React.FC<HeaderProps> = ({ onBookNowClick }) => {
     // --- STATE HOOKS ---
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
@@ -75,8 +79,7 @@ export const Header: React.FC = () => {
 
             {/* Botão Agendar Desktop */}
             <a
-                href="#agendar"
-                onClick={(e) => handleLinkClick(e, 'agendar')}
+                onClick={onBookNowClick}
                 className="hidden md:inline-block bg-primary text-dark-text font-bold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity duration-300"
             >
                 Agendar Agora
@@ -109,8 +112,7 @@ export const Header: React.FC = () => {
                     </a>
                 ))}
                 <a
-                    href="#agendar"
-                    onClick={(e) => handleLinkClick(e, 'agendar')}
+                    onClick={onBookNowClick}
                     className="bg-primary text-dark-text font-bold py-4 px-10 rounded-lg text-xl"
                 >
                     Agendar Agora

@@ -1,10 +1,12 @@
 /*
  * ARQUIVO: src/firebaseConfig.ts
- * DESCRIÇÃO: Inicializa e configura a conexão com o Firebase de forma segura.
+ * DESCRIÇÃO: Inicializa e configura a conexão com o Firebase.
  */
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth"; // <-- IMPORTE O getAuth
 
+// ... (firebaseConfig continua igual)
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_API_KEY,
   authDomain: import.meta.env.VITE_AUTH_DOMAIN,
@@ -15,4 +17,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+
+// Exportamos as instâncias dos serviços que vamos usar
 export const db = getFirestore(app);
+export const auth = getAuth(app); // <-- EXPORTE A INSTÂNCIA DO AUTH
