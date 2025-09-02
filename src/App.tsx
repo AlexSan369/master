@@ -1,28 +1,22 @@
+/*
+ * ARQUIVO: src/App.tsx
+ * DESCRIÇÃO: Adicionada a rota para a página de login.
+ */
 import React from 'react';
-import { Header } from './components/Header'; // Assumindo que exportou como nomeado
-import {HeroHeader} from './components/HeroHeader';
-import AboutUsSection from './components/AboutUsSection';
-import ServicesSection from './components/ServicesSection';
-import CtaSection from './components/CtaSection';
-import WhyChooseUsSection from './components/WhyChooseUsSection';
-import CourseEnrollmentSection from './components/CourseEnrollmentSection';
-import MapSection from './components/MapSection';
-import {Footer} from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage'; // <-- IMPORTE A NOVA PÁGINA
 
 const App: React.FC = () => {
     return (
         <div className="bg-background font-sans">
-            <Header />
-            <main>
-                <HeroHeader />
-                <AboutUsSection />
-                <ServicesSection />
-                <CtaSection />
-                <WhyChooseUsSection />
-                <CourseEnrollmentSection />
-                <MapSection />
-                <Footer />
-            </main>
+            <Router>
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/login" element={<LoginPage />} /> {/* <-- ADICIONE A NOVA ROTA */}
+                    {/* <Route path="/admin" element={<AdminDashboard />} /> */}
+                </Routes>
+            </Router>
         </div>
     );
 };
