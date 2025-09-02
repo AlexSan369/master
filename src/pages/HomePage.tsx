@@ -1,6 +1,5 @@
 /*
- * ARQUIVO: src/pages/HomePage.tsx
- * DESCRIÇÃO: Corrigido para aceitar a propriedade onBookNowClick.
+ ARQUIVO: src/pages/HomePage.tsx
  */
 import React from 'react';
 // Importações de todos os nossos componentes
