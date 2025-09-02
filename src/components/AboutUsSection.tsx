@@ -1,10 +1,11 @@
 /*
  * ARQUIVO: src/components/AboutUsSection.tsx
- * DESCRIÇÃO: Seção "Sobre Nós" atualizada para focar na experiência na barbearia.
+ * DESCRIÇÃO: Corrigido para usar "export default" de forma consistente.
  */
 import React from 'react';
 import aboutImg from '../assets/about-us-img.png';
 
+// Este componente pode continuar a ser uma constante local, pois só é usado aqui.
 const StatItem: React.FC<{ value: string; label: string }> = ({ value, label }) => (
   <div>
     <p className="text-4xl md:text-5xl font-extrabold text-primary">{value}</p>
@@ -12,6 +13,7 @@ const StatItem: React.FC<{ value: string; label: string }> = ({ value, label }) 
   </div>
 );
 
+// A declaração principal do componente não tem "export" aqui.
 const AboutUsSection: React.FC = () => {
   return (
     <section id="sobre-nos" className="bg-light-bg py-20 px-4 md:px-12">
@@ -26,7 +28,6 @@ const AboutUsSection: React.FC = () => {
         </div>
 
         <div className="text-center lg:text-left">
-          {/* --- NOVO TÍTULO E DESCRIÇÃO --- */}
           <h2 className="text-3xl md:text-5xl font-extrabold text-dark-text leading-tight">
             A ARTE DA BARBEARIA CLÁSSICA REINVENTADA
           </h2>
@@ -44,4 +45,5 @@ const AboutUsSection: React.FC = () => {
   );
 };
 
+// O export é feito apenas no final do ficheiro.
 export default AboutUsSection;

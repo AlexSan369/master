@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header } from './components/Header'; // Assumindo que exportou como nomeado
 import {HeroHeader} from './components/HeroHeader';
-import {AboutUsSection} from './components/AboutUsSection';
+import AboutUsSection from './components/AboutUsSection';
 import ServicesSection from './components/ServicesSection';
 import CtaSection from './components/CtaSection';
 import WhyChooseUsSection from './components/WhyChooseUsSection';

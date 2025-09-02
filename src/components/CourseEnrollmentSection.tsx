@@ -17,11 +17,11 @@ const CourseEnrollmentSection: React.FC = () => {
                     <div className="mt-8 space-y-4 flex flex-col items-center lg:items-start">
                         <div className="flex items-center">
                             <Phone size={24} className="text-primary mr-4" />
-                            <span>Ligue para nós: +55 (81) 99999-8888</span>
+                            <span>Ligue para nós: +55 (81) 99470-4950</span>
                         </div>
                         <div className="flex items-center">
                             <Mail size={24} className="text-primary mr-4" />
-                            <span>Envie um email: curso@mestrebarbearia.com</span>
+                            <span>Envie um email: contato@mestrebarbearia.com.br</span>
                         </div>
                     </div>
                 </div>
